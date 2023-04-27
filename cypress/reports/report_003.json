@@ -1,0 +1,145 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-04-27T07:16:57.443Z",
+    "end": "2023-04-27T07:17:20.349Z",
+    "duration": 22906,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6d612458-d56f-4e6c-9624-840da9a3624d",
+      "title": "",
+      "fullFile": "cypress\\e2e\\ParaBankTest\\ForgotLoginInfo.cy.js",
+      "file": "cypress\\e2e\\ParaBankTest\\ForgotLoginInfo.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f974cd3a-f15f-4279-a510-ca21f689fa13",
+          "title": "Find Login Information of User",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "User is able to Find Login Information By Entering Correct Details",
+              "fullTitle": "Find Login Information of User User is able to Find Login Information By Entering Correct Details",
+              "timedOut": null,
+              "duration": 8740,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//use data from fixture file\ncy.fixture('ForgotLoginInfo.json').then(floginfo => {\n  const findlogin = new _ForgotLoginInfo.default();\n  //Click on Forgot Login Info Button \n  findlogin.ClickForgotLoginInfoButton();\n  //Enter Details for Finding Login Information\n  findlogin.setFirstName(floginfo.firstname);\n  findlogin.setLastName(floginfo.lastname);\n  findlogin.setAddress(floginfo.address);\n  findlogin.setCity(floginfo.city);\n  findlogin.setState(floginfo.state);\n  findlogin.setZipCode(floginfo.zipcode);\n  findlogin.setSSN(floginfo.ssn);\n  //Click on Find Login Button\n  findlogin.ClickFindLoginButton();\n  //Validate login deatils searched.\n  findlogin.ValidateLoginInfo();\n});",
+              "err": {},
+              "uuid": "43f72928-470d-4940-bd7e-31b2be80d8d6",
+              "parentUUID": "f974cd3a-f15f-4279-a510-ca21f689fa13",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": " User is able to Find Login Information without Entering SSN Number",
+              "fullTitle": "Find Login Information of User  User is able to Find Login Information without Entering SSN Number",
+              "timedOut": null,
+              "duration": 6658,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//use data from fixture file\ncy.fixture('ForgotLoginInfo.json').then(floginfo => {\n  const findlogin = new _ForgotLoginInfo.default();\n  //Click on Forgot Login Info Button\n  findlogin.ClickForgotLoginInfoButton();\n  //Enter Details for Finding Login Information\n  findlogin.setFirstName(floginfo.firstname);\n  findlogin.setLastName(floginfo.lastname);\n  findlogin.setAddress(floginfo.address);\n  findlogin.setCity(floginfo.city);\n  findlogin.setState(floginfo.state);\n  findlogin.setZipCode(floginfo.zipcode);\n  findlogin.setSSN(floginfo.emptyssn);\n  //Click on Find Login Button\n  findlogin.ClickFindLoginButton();\n  //Validate login deatils searched.\n  findlogin.ValidateLoginInfo();\n});",
+              "err": {},
+              "uuid": "adf6e233-e7db-44ce-ba2a-0faaa06ce6f6",
+              "parentUUID": "f974cd3a-f15f-4279-a510-ca21f689fa13",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": " User is not able to Find Login Information with Empty Fields",
+              "fullTitle": "Find Login Information of User  User is not able to Find Login Information with Empty Fields",
+              "timedOut": null,
+              "duration": 3951,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//use data from fixture file\ncy.fixture('ForgotLoginInfo.json').then(floginfo => {\n  const findlogin = new _ForgotLoginInfo.default();\n  //Click on Forgot Login Info Button\n  findlogin.ClickForgotLoginInfoButton();\n  //Click on Find Login Button\n  findlogin.ClickFindLoginButton();\n  //If regitser Button is visible on Home Page User is not able to Find Login Information with Empty Field\n  findlogin.validateEmptyFindLogin();\n});",
+              "err": {},
+              "uuid": "b208a3ae-52da-47a4-903c-58da10c55ffd",
+              "parentUUID": "f974cd3a-f15f-4279-a510-ca21f689fa13",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "43f72928-470d-4940-bd7e-31b2be80d8d6",
+            "adf6e233-e7db-44ce-ba2a-0faaa06ce6f6",
+            "b208a3ae-52da-47a4-903c-58da10c55ffd"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 19349,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "charts": true,
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

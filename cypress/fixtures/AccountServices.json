@@ -1,0 +1,50 @@
+{
+    "firstname" : "09",
+    "lastname" : "09",
+    "address" : "09",
+    "city" : "09",
+    "state" : "09",
+    "zipcode" : "09",
+    "phonenumber" : "09",
+    "ssn" : "09",
+    "username" : "09",
+    "password" : "09",
+    "rpassword" : "09",
+    "emptyssn" :"",
+    "usernamelog" :"09",
+    "passwordlog" :"09",
+    "transferamount" :"5000",
+    "payeename" : "09",
+    "payeeaddress" : "09",
+    "payeecity" : "09",
+    "payeestate" : "09",
+    "payeezipcode" : "09",
+    "payeephone" : "09",
+    "payeeaccount" : "09",
+    "payeeverifyaccount" : "09",
+    "payeeamount" : "1000",
+    "transactionid" :"15586",
+    "transactiondate" :"04-27-2023",
+    "fromdaterange" :"04-01-2023",
+    "todaterange" :"04-31-2023",
+    "transactionamount" :"5000",
+    "updatefname" :"091",
+    "updatelname" :"091",
+    "updateaddress" :"091",
+    "updatecity" :"091",
+    "updatestate" :"091",
+    "updatezipcode" :"091",
+    "updatepno" :"091",
+    "loanamt" :"50000",
+    "downpayment" :"500",
+    "initbal" :"10000",
+    "minbal" :"5000"
+
+
+
+
+
+
+
+
+}

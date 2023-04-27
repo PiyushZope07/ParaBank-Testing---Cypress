@@ -1,0 +1,183 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-04-27T08:26:37.680Z",
+    "end": "2023-04-27T08:27:12.628Z",
+    "duration": 34948,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "131d82e3-aed4-4b09-aa64-5d7b438d4fbc",
+      "title": "",
+      "fullFile": "cypress\\e2e\\ParaBankTest\\AdminPage.cy.js",
+      "file": "cypress\\e2e\\ParaBankTest\\AdminPage.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "af1e2362-0f63-47b0-a2ee-19a0b84eb64d",
+          "title": "Admin Page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test Whether Database has been initialized or not",
+              "fullTitle": "Admin Page Test Whether Database has been initialized or not",
+              "timedOut": null,
+              "duration": 9052,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Click on Admin Page link\nadmin.clickAdminPageLink();\n//Click on Initialize Button\nadmin.clickInitializeButton();\n//Validate Database Initialize Text Result is matching with current \nadmin.validateIntializeButton();",
+              "err": {},
+              "uuid": "a2381723-5cb6-4d5a-a0be-f498befeea23",
+              "parentUUID": "af1e2362-0f63-47b0-a2ee-19a0b84eb64d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test Whether Database has been Cleaned or not",
+              "fullTitle": "Admin Page Test Whether Database has been Cleaned or not",
+              "timedOut": null,
+              "duration": 5163,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Click on Admin Page link\nadmin.clickAdminPageLink();\n//Click on Clean Button\nadmin.clickCleanButton();\n//Validate Database Clean Text Result is matching with current \nadmin.validateCleanButton();",
+              "err": {},
+              "uuid": "3ed3c8f1-4c94-4e72-ae64-9d184212fddf",
+              "parentUUID": "af1e2362-0f63-47b0-a2ee-19a0b84eb64d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify whether JMS Service is Running or not",
+              "fullTitle": "Admin Page Verify whether JMS Service is Running or not",
+              "timedOut": null,
+              "duration": 7411,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Click on Admin Page link\nadmin.clickAdminPageLink();\n// Clicking on JMS Start and Shut Button if it is visible then we are vaidating that\nadmin.JMS();",
+              "err": {},
+              "uuid": "676d362e-7ce3-4ce6-bca1-35902e0ef1f9",
+              "parentUUID": "af1e2362-0f63-47b0-a2ee-19a0b84eb64d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test Whether Data Access Mode Checkbox is working or not",
+              "fullTitle": "Admin Page Test Whether Data Access Mode Checkbox is working or not",
+              "timedOut": null,
+              "duration": 3636,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Click on Admin Page link\nadmin.clickAdminPageLink();\n//Selecting a soap radiobutton ad validating whether it is checked or not\nadmin.SoapAccessCheckBox();\n//Selecting a rest xml radiobutton ad validating whether it is checked or not\nadmin.RestXmlCheckBox();\n//Selecting a rest json radiobutton ad validating whether it is checked or not\nadmin.RestJsonCheckBox();\n//Selecting a jdbc radiobutton ad validating whether it is checked or not\nadmin.JdbcCheckBox();",
+              "err": {},
+              "uuid": "711bca63-47e7-41ce-ba54-3305d7f5e285",
+              "parentUUID": "af1e2362-0f63-47b0-a2ee-19a0b84eb64d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test Whether settings are saving sucessfully or not in Admin Page",
+              "fullTitle": "Admin Page Test Whether settings are saving sucessfully or not in Admin Page",
+              "timedOut": null,
+              "duration": 6282,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//use data from fixture file\ncy.fixture('Admin.json').then(log => {\n  //Click on Admin Page link\n  admin.clickAdminPageLink();\n  //Click on Initialize Button\n  admin.clickInitializeButton();\n  //Selecting a rest json radiobutton ad validating whether it is checked or not\n  admin.RestJsonCheckBox();\n  //Enter Initial Balanace and Minimum balance for Configuration\n  admin.setInitBalance(log.initbal);\n  admin.setMinimumBalance(log.minbal);\n  //Select JMS from LoanProvider Dropdown\n  admin.LoanProviderDropdown();\n  //Select Available Funds  from LoanProcessor Dropdown\n  admin.LoanProcessorDropdown();\n  //Click on Submit Button to submit Admin Settings\n  admin.SubmitAdmin();\n  //Validating Settings Saved Sucessfully\n  admin.ValidatingSettingSuccess();\n});",
+              "err": {},
+              "uuid": "e525e9fa-93da-45f3-95bf-34aefefc6db3",
+              "parentUUID": "af1e2362-0f63-47b0-a2ee-19a0b84eb64d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a2381723-5cb6-4d5a-a0be-f498befeea23",
+            "3ed3c8f1-4c94-4e72-ae64-9d184212fddf",
+            "676d362e-7ce3-4ce6-bca1-35902e0ef1f9",
+            "711bca63-47e7-41ce-ba54-3305d7f5e285",
+            "e525e9fa-93da-45f3-95bf-34aefefc6db3"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 31544,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "charts": true,
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
